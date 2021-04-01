@@ -3,11 +3,12 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 
 export const initializeLoginFramework = () => {
-    if (firebase.app.length === 0) {
+    if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
         
     }
 }
+  
 
 export const handleGoogleSignIn = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
